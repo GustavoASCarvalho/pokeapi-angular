@@ -1,0 +1,213 @@
+a {
+    &:focus {
+        .container {
+            transform: translateY(-10px);
+        }
+
+    }
+}
+
+.container {
+    width: 350px;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.3s ease;
+    outline: 2px solid transparent;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+
+    &__card {
+        position: relative;
+        width: 100%;
+        padding: 30px 20px;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+
+        img {
+            display: block;
+            width: 180px;
+            max-height: 200px;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        &__hp {
+            width: 80px;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 30px;
+            margin-left: auto;
+            font-weight: 400;
+        }
+
+        &__name {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        &__types {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0 40px 0;
+        }
+
+        &__hp span,
+        &__types span {
+            font-size: 12px;
+            letter-spacing: 0.4px;
+            font-weight: 600;
+        }
+
+        &__types span {
+            padding: 5px 20px;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        &__stats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+
+            p {
+                color: #404060;
+            }
+
+            h3 {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.color__card__bug {
+    background: radial-gradient(circle at 50% 00%, #26de81 40%, #ffffff 40%);
+}
+
+.color__span__bug {
+    background-color: #26de81;
+}
+
+.color__card__dragon {
+    background: radial-gradient(circle at 50% 00%, #ffeaa7 40%, #ffffff 40%);
+}
+
+.color__span__dragon {
+    background-color: #ffeaa7;
+}
+
+.color__card__electric {
+    background: radial-gradient(circle at 50% 00%, #fed330 40%, #ffffff 40%);
+}
+
+.color__span__electric {
+    background-color: #fed330;
+}
+
+.color__card__fairy {
+    background: radial-gradient(circle at 50% 00%, #FF0069 40%, #ffffff 40%);
+}
+
+.color__span__fairy {
+    background-color: #FF0069;
+}
+
+.color__card__fighting {
+    background: radial-gradient(circle at 50% 00%, #30336b 40%, #ffffff 40%);
+}
+
+.color__span__fighting {
+    background-color: #30336b;
+}
+
+.color__card__fire {
+    background: radial-gradient(circle at 50% 00%, #f0932b 40%, #ffffff 40%);
+}
+
+.color__span__fire {
+    background-color: #f0932b;
+}
+
+.color__card__flying {
+    background: radial-gradient(circle at 50% 00%, #81ecec 40%, #ffffff 40%);
+}
+
+.color__span__flying {
+    background-color: #81ecec;
+}
+
+.color__card__grass {
+    background: radial-gradient(circle at 50% 00%, #00b894 40%, #ffffff 40%);
+}
+
+.color__span__grass {
+    background-color: #00b894;
+}
+
+.color__card__ground {
+    background: radial-gradient(circle at 50% 00%, #EFB549 40%, #ffffff 40%);
+}
+
+.color__span__ground {
+    background-color: #EFB549;
+}
+
+.color__card__ghost {
+    background: radial-gradient(circle at 50% 00%, #a55eea 40%, #ffffff 40%);
+}
+
+.color__span__ghost {
+    background-color: #a55eea;
+}
+
+.color__card__ice {
+    background: radial-gradient(circle at 50% 00%, #74b9ff 40%, #ffffff 40%);
+}
+
+.color__span__ice {
+    background-color: #74b9ff;
+}
+
+.color__card__normal {
+    background: radial-gradient(circle at 50% 00%, #95afc0 40%, #ffffff 40%);
+}
+
+.color__span__normal {
+    background-color: #95afc0;
+}
+
+.color__card__poison {
+    background: radial-gradient(circle at 50% 00%, #6c5ce7 40%, #ffffff 40%);
+}
+
+.color__span__poison {
+    background-color: #6c5ce7;
+}
+
+.color__card__psychic {
+    background: radial-gradient(circle at 50% 00%, #a29bfe 40%, #ffffff 40%);
+}
+
+.color__span__psychic {
+    background-color: #a29bfe;
+}
+
+.color__card__rock {
+    background: radial-gradient(circle at 50% 00%, #2d3436 40%, #ffffff 40%);
+}
+
+.color__span__rock {
+    background-color: #2d3436;
+}
+
+.color__card__water {
+    background: radial-gradient(circle at 50% 00%, #0190FF 40%, #ffffff 40%);
+}
+
+.color__span__water {
+    background-color: #0190FF;
+}

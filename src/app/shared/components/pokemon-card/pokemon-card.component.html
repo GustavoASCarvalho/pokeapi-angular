@@ -1,0 +1,32 @@
+<a>
+  <div class="container">
+    <div class="container__card color__card__{{pokemon!.types[0]}}">
+      <p class="container__card__hp">
+        <span>HP</span>
+        {{pokemon!.status.hp}}
+      </p>
+      <img src="{{pokemon!.image}}" alt="Foto pixelizada do pokemon {{pokemon!.name}}"/>
+      <h2 class="container__card__name">{{pokemon!.name}}</h2>
+      <div class="container__card__types">
+        <span *ngFor="let type of pokemon!.types" class="color__span__{{type}}">
+          {{type}}
+        </span>
+      </div>
+      <div class="container__card__stats">
+        <div>
+          <h3>{{pokemon!.status.attack}}</h3>
+          <p>Attack</p>
+        </div>
+        <div>
+          <h3>{{pokemon!.status.defense}}</h3>
+          <p>Defense</p>
+        </div>
+        <div>
+          <h3>{{pokemon!.status.speed}}</h3>
+          <p>Speed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</a>
