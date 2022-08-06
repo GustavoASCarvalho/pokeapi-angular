@@ -1,0 +1,13 @@
+<div class="form">
+    <h3 class="form__title">inscreva-se na nossa newsletter</h3>
+    <form [formGroup]="form">
+        <div class="form__row">
+            <div class="form__field">
+                <input type="email" placeholder="fulano@gmail.com" formControlName="email">
+            </div>
+            <button type="button" (click)="inscrever()" [disabled]="sucesso">Ok</button>
+        </div>
+        <span class="sucesso" *ngIf="sucesso">Obrigado por se inscrever em nossa newsletter diária</span>
+        <span class="erro" *ngIf="erro">Insira um email válido</span>
+    </form>
+</div>

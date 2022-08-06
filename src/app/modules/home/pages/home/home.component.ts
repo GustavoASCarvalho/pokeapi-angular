@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Pokemon } from 'src/app/shared/data/models/pokemon.model';
 import { PokemonService } from 'src/app/shared/data/services/pokemon.service';
 
@@ -9,7 +10,11 @@ import { PokemonService } from 'src/app/shared/data/services/pokemon.service';
 export class HomeComponent implements OnInit {
 
   pokemons: Array<any> = [];
-  listaDeIds: Array<number> = [];
+  listaDeIds: Array<number> = [
+    1,
+    4,
+    7,
+  ];
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -18,16 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   gerarListaDePokemons() {
-    this.listaDeIds = [];
-    this.pokemons = [];
-    for (let i = 0; i < 3; i++) {
-      let id;
-      do {
-        id = this.getRandonId();
-      } while (this.listaDeIds.includes(id));
-      this.listaDeIds.push(id);
-    }
-
     this.listaDeIds.forEach(id => {
       this.pokemonService.buscarPokemonPorNomeOuId(id).subscribe(
         data => {
@@ -49,9 +44,5 @@ export class HomeComponent implements OnInit {
         }
       );
     })
-  }
-
-  getRandonId() {
-    return Math.floor(Math.random() * 151) + 1;
   }
 }

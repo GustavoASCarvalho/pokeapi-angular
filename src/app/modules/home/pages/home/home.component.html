@@ -12,7 +12,8 @@
         </div>
     </div>
     <div class="content__pokemon-card-list">
-        <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon" (click)="gerarListaDePokemons()"></app-pokemon-card>
+        <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-card>
     </div>
 </main>
+<app-form-newsletter></app-form-newsletter>
 <app-footer></app-footer>
