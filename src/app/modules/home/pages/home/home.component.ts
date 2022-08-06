@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Pokemon } from 'src/app/shared/data/models/pokemon.model';
+import { Pokemon } from 'src/app/shared/data/models/pokemon/pokemon.model';
 import { PokemonService } from 'src/app/shared/data/services/pokemon.service';
 
 @Component({

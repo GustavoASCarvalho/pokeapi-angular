@@ -1,6 +1,6 @@
 <header>
-    <a href="#asdasd">
-        <span>Albúm de fotos</span>
+    <a href="#" [routerLink]="''">
+        <span>Inicio</span>
     </a>
     <a href="#">
         <span>Pokemon's</span>
@@ -8,10 +8,12 @@
     <a href="#">
         <img src="assets/images/logo_pokemon.png" alt="logo do pokémon">
     </a>
-    <a href="#">
-        <span>Lista de Ataques</span>
+    <span *ngIf="user">{{user.displayName}}</span>
+    <span *ngIf="!user">Bem-vindo</span>
+    <a href="#" [routerLink]="'login'" *ngIf="!user">
+        <span>Entrar</span>
     </a>
-    <a href="#">
-        <span>Lugares</span>
+    <a href="#" *ngIf="user">
+        <span>Sair</span>
     </a>
 </header>

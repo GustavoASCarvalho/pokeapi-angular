@@ -35,6 +35,15 @@ header {
                 border-color: #000;
             }
         }
+
+        &:last-of-type {
+            border-radius: 999px;
+            background-color: #08224e;
+
+            span {
+                color: #fff;
+            }
+        }
     }
 
     span {

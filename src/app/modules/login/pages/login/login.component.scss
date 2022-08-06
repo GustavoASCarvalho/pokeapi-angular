@@ -1,0 +1,65 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+
+    font-family: "Noto Sans", Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: #191919;
+    color: #f5f5f5;
+    text-align: justify;
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__text {
+        color: rgb(245, 245, 245, 0.7);
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    &__button {
+        min-width: 400px;
+        width: 30vw;
+        height: 50px;
+        margin-top: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+
+        border: 3px solid transparent;
+        border-image: linear-gradient(45deg, rgba(22, 85, 194, 0.9) 20%, rgb(214, 224, 20) 120%);
+        border-image-slice: 1;
+        border-radius: 10px;
+        /* will have no effect */
+        transition: all 0.1s ease-out;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(91, 91, 91, 0.5);
+        }
+
+        i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    }
+
+    &__error {
+        color: rgb(214, 0, 0);
+        font-size: 1rem;
+        text-align: center;
+    }
+}

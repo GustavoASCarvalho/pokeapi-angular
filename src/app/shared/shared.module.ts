@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     HttpClientModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,

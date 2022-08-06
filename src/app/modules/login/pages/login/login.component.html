@@ -1,0 +1,13 @@
+<div class="content">
+    <h2 class="content__title">Acesse sua conta</h2>
+    <p class="content__text">
+        utilizando a autenticação do Google <br> você poderá acessar sua conta e gerenciar seus dados.
+    </p>
+    <button class="content__button" (click)="entrar()">
+        <i class="ph-google-logo-bold"></i>
+        <p>Entrar com Google</p>
+    </button>
+    <div class="content__error">
+        <p *ngIf="error">{{ error }}</p>
+    </div>
+</div>
