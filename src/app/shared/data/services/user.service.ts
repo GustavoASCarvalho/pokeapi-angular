@@ -19,6 +19,6 @@ export class UserService {
   }
 
   sair() {
-    this.user = {} as User;
+    this.user = undefined;
   }
 }

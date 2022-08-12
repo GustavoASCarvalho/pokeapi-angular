@@ -13,7 +13,7 @@
     <a href="#" [routerLink]="'login'" *ngIf="!user">
         <span>Entrar</span>
     </a>
-    <a href="#" *ngIf="user">
+    <a href="#" (click)="sair()" *ngIf="user">
         <span>Sair</span>
     </a>
 </header>
