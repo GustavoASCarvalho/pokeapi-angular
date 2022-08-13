@@ -16,10 +16,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.user);
   }
 
   sair() {
     this.userService.sair();
+    this.user = undefined;
   }
-
 }
