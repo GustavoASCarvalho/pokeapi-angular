@@ -9,3 +9,10 @@ export interface Pokemon {
     types: Type[];
     status: Status;
 }
+
+export interface PokemonList {
+    results: {
+        name: string;
+        url: string;
+    }[];
+}

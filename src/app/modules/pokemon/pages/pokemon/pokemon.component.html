@@ -1,0 +1,13 @@
+<app-header></app-header>
+<main class="content">
+    <input #input type="text" placeholder="busque por nome ou tipo" (input)="busca(input.value)">
+
+    <div class="content__pokemon-card-list">
+        <p class="content__pokemon-card-list__none" *ngIf="pokemonsFiltrados.length == 0">Nenhum pokemon encontrado!</p>
+        <app-pokemon-card *ngFor="let pokemon of pokemonsFiltrados" [pokemon]="pokemon"></app-pokemon-card>
+    </div>
+    <button class="content__button" *ngIf="pokemonsFiltrados == pokemons" (click)="carregarMais()">
+        Carregar mais
+    </button>
+</main>
+<app-footer></app-footer>

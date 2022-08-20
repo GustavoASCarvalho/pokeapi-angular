@@ -1,15 +1,15 @@
 <a>
   <div class="container">
-    <div class="container__card color__card__{{pokemon!.types[0]}}">
+    <div class="container__card color__card__{{pokemon!.types[0].name}}">
       <p class="container__card__hp">
         <span>HP</span>
         {{pokemon!.status.hp}}
       </p>
-      <img src="{{pokemon!.image}}" alt="Foto pixelizada do pokemon {{pokemon!.name}}"/>
+      <img src="{{pokemon!.image}}" alt="Foto pixelizada do pokemon {{pokemon!.name}}" />
       <h2 class="container__card__name">{{pokemon!.name}}</h2>
       <div class="container__card__types">
-        <span *ngFor="let type of pokemon!.types" class="color__span__{{type}}">
-          {{type}}
+        <span *ngFor="let type of pokemon!.types" class="color__span__{{type.name}}">
+          {{type.name}}
         </span>
       </div>
       <div class="container__card__stats">
@@ -28,5 +28,5 @@
       </div>
     </div>
   </div>
-  
+
 </a>
