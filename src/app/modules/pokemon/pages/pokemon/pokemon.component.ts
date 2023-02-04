@@ -56,10 +56,19 @@ export class PokemonComponent implements OnInit {
   }
 
   filtro(value?: string) {
-    value = value ? value.toLocaleLowerCase().trim() : '';
-    if (value) {
-      //filtro por tipo
-      this.pokemonsFiltrados = this.todosOsPokemons.filter(pokemon => pokemon.name.toLowerCase().trim().includes(value!) || false);
+    let values: string[] = value ? value.toLocaleLowerCase().split(' ') : [''];
+    if (values) {
+      this.pokemonsFiltrados = this.todosOsPokemons.filter(pokemon => {
+        let nome = pokemon.name.toLocaleLowerCase();
+        let tipo = pokemon.types.map(tipo => tipo.name.toLocaleLowerCase());
+        let resultado = false;
+        values.forEach(value => {
+          if (nome.includes(value) || tipo.includes(value)) {
+            resultado = true;
+          }
+        })
+        return resultado;
+      })
     } else {
       this.pokemonsFiltrados = this.pokemons;
     }
