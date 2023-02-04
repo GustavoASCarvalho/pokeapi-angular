@@ -63,9 +63,14 @@ export class PokemonComponent implements OnInit {
         let tipo = pokemon.types.map(tipo => tipo.name.toLocaleLowerCase());
         let resultado = false;
         values.forEach(value => {
-          if (nome.includes(value) || tipo.includes(value)) {
+          if (nome.includes(value)) {
             resultado = true;
           }
+          tipo.forEach(tipo => {
+            if (tipo.includes(value)) {
+              resultado = true;
+            }
+          })
         })
         return resultado;
       })
